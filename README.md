@@ -1,4 +1,4 @@
-# Mastering Data Structures and Algorithms using C and C++
+# Data Structures and Algorithms using C and C++
 
 From the [course](https://www.udemy.com/course/datastructurescncpp/) taught by Abdul Bari.
 
