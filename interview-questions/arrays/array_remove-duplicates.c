@@ -2,18 +2,11 @@
 #include "array_util.h"
 #define N 10
 
-int remove_duplicates(int *nums, int nums_size);
-
-int main(void)
-{
-  int nums[N] = {1, 1, 2, 3, 3, 3, 4, 4, 5, 6};
-  int n = remove_duplicates(nums, N);
-  print_array(nums, n);
-  return 0;
-}
-
 int remove_duplicates(int *nums, int nums_size)
 {
+  if (nums_size == 0)
+    return 0;
+
   int *array = nums++;
   int stored = *array, new_size = 1;
 
@@ -29,4 +22,12 @@ int remove_duplicates(int *nums, int nums_size)
   }
 
   return new_size;
+}
+
+int main(void)
+{
+  int nums[N] = {1, 1, 2, 3, 3, 3, 4, 4, 5, 6};
+  int n = remove_duplicates(nums, N);
+  print_array(nums, n);
+  return 0;
 }
