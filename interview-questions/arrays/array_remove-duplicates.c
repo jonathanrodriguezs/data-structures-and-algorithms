@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "array_util.h"
+
 #define N 10
 
 int remove_duplicates(int nums[], int nums_size)
@@ -11,7 +12,7 @@ int remove_duplicates(int nums[], int nums_size)
   for (int i = 0; i < nums_size; i++)
   {
     int current = nums[i];
-    if (current != stored)
+    if (current != stored) // sequence of repetead number breaks
       nums[new_size++] = stored = current;
   }
 

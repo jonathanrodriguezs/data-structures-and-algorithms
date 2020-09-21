@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "array_util.h"
+
 #define N 4
 
 void rotate(int nums[], int nums_size, int k)
@@ -12,6 +13,7 @@ void rotate(int nums[], int nums_size, int k)
     int prev = nums[current];
     do
     {
+      // cyclic element dependencies
       int next = (current + k) % nums_size;
       int temp = nums[next];
       nums[next] = prev;
